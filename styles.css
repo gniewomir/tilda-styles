@@ -1,0 +1,51 @@
+/**
+ * Opaque tabs and tab bar
+ */
+
+/* #Main is the Tilda window. */
+GtkWindow#Main notebook {
+    padding: 0px;
+
+}
+
+GtkWindow#Main notebook tab {
+    padding: 5px;
+
+}
+
+notebook {
+    background: #000;
+}
+
+/* The following rules affect both the tilda window and the wizard.
+ * Note that GtkLabel has a transparent background by default, to style the
+ * background for a tab, the style must be applied to the tab and tab:active
+ * selectors.
+ */
+notebook tab GtkLabel {
+    padding-left: 15px;
+    padding-right: 15px;
+    color: #fff; /* text color of non-active tabs */
+    background: #000;
+}
+
+notebook tab {
+    border: 0;
+    border-radius: 0;
+    background: #000; /* background color of non-active tabs */
+    border-right: 1px solid #C5C5C5;
+    color: #C5C5C5
+
+}
+
+notebook tab:checked {
+    border: 0;
+    border-radius: 0;
+    color: #000;
+    background-color: #fff; /* background color of active tabs */
+}
+
+.notebook tab GtkLabel {
+    color: #000; /* text-color of active tabs */
+}
+
